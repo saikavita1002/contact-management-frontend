@@ -16,22 +16,22 @@ export const updateContact = (id, contact) =>axios.put(API_UPDATE_URL + '/' + id
 /* import authApi from "./authApi";
 /***********************************************/
 
-import authApi from "./authApi";
+import authapi from "./authApi";
 
 export const createContact = (contactData) =>
-    authApi.post(API_POST_URL, contactData);
+    authapi.post(API_POST_URL, contactData);
 
 export const getAllContacts = () =>
-    authApi.get(API_GET_ALL_CONTACT_URL);
+    authapi.get(API_GET_ALL_CONTACT_URL);
 
 export const getContactById = (id) =>
-    authApi.get(`${API_GET_BY_ID_URL}/${id}`);
+    authapi.get(`${API_GET_BY_ID_URL}/${id}`);
 
 export const deleteContact = (id) =>
-    authApi.delete(`${API_DELETE_URL}/${id}`);
+    authapi.delete(`${API_DELETE_URL}/${id}`);
 
 export const updateContact = (id, contact) =>
-    authApi.put(`${API_UPDATE_URL}/${id}`, contact);
+    authapi.put(`${API_UPDATE_URL}/${id}`, contact);
 
 /*import axios from "axios";
 
