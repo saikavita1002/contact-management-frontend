@@ -1,5 +1,5 @@
 /*import axios from "axios"; */
-const API_URL= "https://contact-management-backend-ws4m.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL;
 const API_POST_URL=API_URL+"/create";
 const API_GET_ALL_CONTACT_URL=API_URL+"/contact-list";
 const API_GET_BY_ID_URL=API_URL+"/find-by";
