@@ -25,7 +25,7 @@ function SignUp() {
 
     try {
         await axios.post(
-        "http://localhost:3000/api/auth/register",
+        "http://localhost:3000/api/auth/sign-up",
         formData
         );
 
