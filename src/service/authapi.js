@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const authApi = axios.create({
+const authapi = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
     headers: {
     "Content-Type": "application/json",
@@ -8,7 +8,7 @@ const authApi = axios.create({
 });
 
 // Add JWT token to every request
-authApi.interceptors.request.use(
+authapi.interceptors.request.use(
     (config) => {
     const token = localStorage.getItem("token");
 
@@ -24,7 +24,7 @@ authApi.interceptors.request.use(
 );
 
 // Handle unauthorized responses
-authApi.interceptors.response.use(
+authapi.interceptors.response.use(
     (response) => response,
     (error) => {
     if (error.response && error.response.status === 401) {
@@ -37,4 +37,4 @@ authApi.interceptors.response.use(
     }
 );
 
-export default authApi;
+export default authapi;
